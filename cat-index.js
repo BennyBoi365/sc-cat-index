@@ -6,7 +6,6 @@ $("#submit").click(function(){
     // Selected breed
     var selectedBreed = $("#breedOptions").val();
     console.log("Selected Breed:", selectedBreed);
-    if (selectedBreed === "Other") {$("#otherBreed").show();} else {$("#otherBreed").hide();};
     var otherBreed = $("#otherBreed").val();
     console.log("Other Breed:", otherBreed);
 
@@ -32,6 +31,7 @@ $("#submit").click(function(){
         lastFed + '<br>' + "Are they friendly? " + selectedFriendly);
 });
 
+// Code for making otherBreed text input appear from WesBot
 $(document).ready(function() {
     // Listen for changes on the dropdown
     $("#breedOptions").change(function() {
