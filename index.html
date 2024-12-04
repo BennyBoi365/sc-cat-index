@@ -11,6 +11,16 @@
 	
 	<!-- Lab-specifc CSS file for any special styling of this particular page -->
 	<link rel="stylesheet" type="text/css" href="cat-index.css">
+
+    <!-- CSS Link to Leaflet Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+
+    <!-- JS Link to Leaflet Map -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
 	
 	<!-- load jQuery library to make javascript easier (must be above our lab js)-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -68,6 +78,7 @@
                 <button id="submit">Submit</button>
             </div>
         </section>
+        <section> <div id="map"></div> </section>
     <nav id="links">
         <!-- Put links to other pages (including the homepage) here. -->
          <ul>
