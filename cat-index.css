@@ -1,4 +1,89 @@
+
+
+#webtitle{
+    text-align: center;
+    padding-block: 0.2em 0.5em; 
+    writing-mode: horizontal-tb;
+    font-size: 45px;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    background-color: #DC8431;
+    color: #442B00;
+  }
+
+
+  /* For Flexbox 1 */
+  #wrapper{
+    display: flex;
+    flex-direction: row; /* This is the default, but just to be explicit */
+    padding-left: 10em;
+  }
+  #wrapper > div > .minor-section1:hover, 
+  #wrapper > div > .minor-section2:hover
+{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+  
+  #column1-1{
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    /* width:5em; */
+  }
+  
+  #column1-2{
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+  }
+  /* end of flexbox1 formatting */
+
+  /* flexbox 2 formatting */
+  #wrapper2{
+    display: flex;
+    flex-direction: row; /* This is the default, but just to be explicit */
+    padding-left: 10em;
+  }
+  #column2-1{
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    /* width:5em; */
+  }
+  #column2-2{
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+  }
+/* end of flexbox2 formatting */
+
+
+  .minor-section1,.minor-section2,.minor-section3,.minor-section4{
+    padding: 30px;
+    margin-bottom: 10px;
+    border: solid 1px #DDC3D0;
+    background-color:#DDC3D0;
+    margin-right: 200px;
+    border-radius: 25px;
+    margin-left: 200px;
+    padding: 20px;
+    width: 400px;
+    height: auto; 
+    font-size: 20px;
+    margin-right: 20px;
+    margin: 40px;
+    font-size: 10px;
+  }
+  
+
 #map { 
     height: 500px;
+    width: 1000px;
     margin: 20px;
+   margin-left: 190px;
  }

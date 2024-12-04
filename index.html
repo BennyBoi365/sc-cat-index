@@ -26,16 +26,53 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
 	<script type="text/javascript" src="cat-index.js" DEFER></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
+<h1 id="webtitle">Santa Cruz Cat Index</h1>
 <body>
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
 	<main id="content">
-		<section>
+        <div id="wrapper">
+            <div id="column1-1">
+                 <div class="minor-section1">
+                    <h1>Welcome</h1>
+                    <p>Description of website and goal</p>
+                 </div>
+            </div>
+            <div id="column1-2">
+                <div class="minor-section2">
+                    <h1>Navigation and How To</h1>
+                    <p>How the website works and how to add your own cat info</p>
+                 </div>
+             </div>
+        </div>
+
+    <section> <div id="map"></div> </section>
+     <div id="wrapper2">
             <div id="output"></div>
 			<div id="cat-details">
+                <div id="column2-1">
+             <div class="minor-section3">
+                <h2>Upload a Photo of Your Cat!<h2>
+                    <form id="uploadForm">
+                        <label for="imageUpload">Choose and image!</label>
+                        <input type="file" id="imageUpload" accept="image/*">
+                    </form>
+                <h3>Preview:</h3>
+                <div id="imagePreview">
+                    <img id="previewIMG" src="" alt="Image preview will appear here" style="display: none; max-width: 100%;"/>
+                </div>
+                <button id="uploadBtn" style="margin-top: 20px;">Upload to Firebase</button>
+                <script src="upload.js"> </script>
+                 </div>
+                </div>
+            </div>
+            <div id="column2-2">
+            <div class="minor-section4">
                 <p>Name</p>
                 <input type="text" id="catName" placeholder="Cat's Name">
-
                 <p>Breed</p>
                 <select id="breedOptions">
                     <option value="Calico">Calico</option>
@@ -43,8 +80,12 @@
                     <option value="Persian">Persian</option>
                     <option value="Tortoiseshell">Tortoiseshell</option>
                     <option value="Ragdoll">Ragdoll</option>
+                    <option value="Siamese">Siamese</option>
+                    <option value="Maine Coon">Maine Coone</option>
+                    <option value="Sphynx">Sphynx</option>
                     <option value="">Other</option>
                 </select>
+               
                 <input type="text" id="otherBreed" placeholder="Other Breed" style="display: none;">
 
                 <p>Color/Pattern</p>
@@ -77,8 +118,10 @@
                 </select>
                 <button id="submit">Submit</button>
             </div>
-        </section>
-        <section> <div id="map"></div> </section>
+            </div>
+        </div>
+    </div>
+        
     <nav id="links">
         <!-- Put links to other pages (including the homepage) here. -->
          <ul>
