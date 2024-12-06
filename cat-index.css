@@ -6,15 +6,21 @@
     border-color: #442B00;
     padding-block: 0.2em 0.5em; 
     writing-mode: horizontal-tb;
-    font-size: 45px;
+    font-size: 75px;
     font-family: "Pacifico", cursive;
     font-weight: 400;
     font-style: normal;
-    background-size: 500px;
+  border-style: ridge;
+  border-width: 10px;
+  border-color: #DDC3D0;
+   margin-right: 200px;
+   margin-left: 196px;
+    
 }
 
 body{
-    background-color: #DC8431;
+  background-image: linear-gradient(to bottom right,#FFBD6F, #FD8451);
+
     color: #442B00;
   }
 
@@ -24,8 +30,8 @@ body{
     display: flex;
     flex-direction: row; /* This is the default, but just to be explicit */
     padding-left: 10em;
-  }
-  #wrapper > div > .minor-section1:hover, 
+  }  
+#wrapper > div > .minor-section1:hover, 
   #wrapper > div > .minor-section2:hover
 {
     transform: scale(1.1);
