@@ -124,3 +124,39 @@ uploadBtn.addEventListener('click', function() {
         });
     });
 });
+const express = require('express');
+const app2 = express();
+const cors = require('cors');
+const bodyParser = require('body-parser');
+
+// Dummy in-memory storage for pins
+let pins = [];
+
+// Middleware to parse JSON bodies
+app2.use(bodyParser.json());
+app2.use(cors());
+
+// Serve the static files (HTML, CSS, JS)
+app2.use(express.static('public'));
+
+// API to get all saved pins
+app2.get('/api/getPins', (req, res) => {
+    res.json(pins);
+});
+
+// API to save a new pin
+app2.post('/api/savePin', (req, res) => {
+    const { x, y } = req.body;
+    if (x !== undefined && y !== undefined) {
+        pins.push({ x, y });
+        res.status(200).json({ message: 'Pin saved successfully' });
+    } else {
+        res.status(400).json({ message: 'Invalid pin data' });
+    }
+});
+
+// Start the server
+const port = 3000;
+app.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}`);
+});
