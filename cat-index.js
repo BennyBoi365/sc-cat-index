@@ -100,7 +100,7 @@ $(document).ready(function() {
         // When all necessary fields input, code adapted from Wes Modes
         if (catName && selectedBreed && catColor && selectedTags && selectedFriendly && !isNaN(latitude) && !isNaN(longitude)) {
             // Push to firebase
-            catsRef.push([
+            catsRef.push({
                 catName,
                 selectedBreed,
                 otherBreed,
@@ -109,7 +109,7 @@ $(document).ready(function() {
                 lastFed,
                 selectedFriendly,
                 location: [latitude, longitude]
-            ]);
+            });
 
             //Clear inputs
             $("#catName").val('');
