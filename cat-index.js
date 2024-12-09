@@ -41,7 +41,7 @@ $(document).ready(function() {
         const catData = snapshot.val();
 
         // Add marker to map
-        const marker = L.marker([catData.location[0], catData.location[1]]).addTo(map);
+        const marker = L.marker([catData.latitude, catData.longitude]).addTo(map);
         marker.bindPopup(`
             <p>${catData.catName}</p>
             <p>${catData.selectedBreed}</p>
@@ -108,7 +108,8 @@ $(document).ready(function() {
                 selectedTags,
                 lastFed,
                 selectedFriendly,
-                location = [latitude, longitude]
+                latitude, 
+                longitude
             ]);
 
             //Clear inputs
