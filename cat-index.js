@@ -116,7 +116,7 @@ $(document).ready(function() {
             $("#catName").val('');
             $("#breedOptions").val('');
             $("#otherBreed").val('');
-            $("##catColor").val('');
+            $("#catColor").val('');
             $("#tagsYesOrNo").val('');
             $("#lastFed").val('');
             $("#friendlyYesOrNo").val('');
