@@ -92,9 +92,9 @@ $(document).ready(function() {
         console.log("Is the cat friendly?:", selectedFriendly);
 
         // Location data
-        const latitude = parseFloat($("#latitude").val);
+        const latitude = parseFloat($("#latitude").val());
         console.log("Latitude:", latitude);
-        const longitude = parseFloat($("#longitude").val);
+        const longitude = parseFloat($("#longitude").val());
         console.log("Longitude:", longitude);
 
         // When all necessary fields input, code adapted from Wes Modes
