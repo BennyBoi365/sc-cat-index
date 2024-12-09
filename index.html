@@ -21,6 +21,10 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 	
 	<!-- load jQuery library to make javascript easier (must be above our lab js)-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -127,9 +131,14 @@
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                 </select>
+
+                <p>Location</p>
+                <input id="latitude" type="number" placeholder="Latitude">
+                <input id="longitude" type="number" placeholder="Longitude">
+
                 <button id="submit">Submit</button>
             </div>
-             <head>
+             <!--<head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>Map with Droppable Pins</title>
@@ -155,8 +164,9 @@
              <body>
             
              <div id="map-container"></div>
-            
+             -->
              <!-- Embedded JavaScript at the end of the body -->
+             <!--
              <script>
                 const mapContainer = document.getElementById("map-container");
                 
@@ -219,7 +229,7 @@
              </script>
             
              </body>
-             </html>
+             </html> -->
             </div>
         </div>
     </div>
