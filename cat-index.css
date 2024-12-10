@@ -12,7 +12,7 @@
     font-style: normal;
   border-style: ridge;
   border-width: 10px;
-  border-color: #DDC3D0;
+  border-color: #4f3b29ee;
    margin-right: 200px;
    margin-left: 196px;
     
@@ -60,7 +60,8 @@ body{
   #wrapper2{
     display: flex;
     flex-direction: row; /* This is the default, but just to be explicit */
-    padding-left: 10em;
+    padding-left: 450px;  
+    margin: 80 auto;
   }
   #column2-1{
     flex: 1;
@@ -106,3 +107,7 @@ box-shadow: 10px 10px 13px 3px rgba(0,0,0,0.41);
 -moz-box-shadow: 10px 10px 13px 3px rgba(0,0,0,0.41);
 box-shadow: 10px 10px 13px 3px rgba(0,0,0,0.41);
  }
+
+ .container {
+  text-align: center;
+}
