@@ -8,7 +8,7 @@
     writing-mode: horizontal-tb;
     font-size: 75px;
     font-family: "Pacifico", cursive;
-    font-weight: 400;
+    font-weight: 402;
     font-style: normal;
   border-style: ridge;
   border-width: 10px;
@@ -84,13 +84,14 @@ body{
     margin-right: 200px;
     border-radius: 25px;
     margin-left: 200px;
+    font-family: "Helvetica";
     padding: 20px;
     width: 400px;
     height: auto; 
     font-size: 20px;
     margin-right: 20px;
     margin: 40px;
-    font-size: 10px;
+    font-size: 23px;
   }
   
 
