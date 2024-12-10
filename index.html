@@ -46,6 +46,7 @@
             <div id="column1-1">
                  <div class="minor-section1">
                     <h1>Welcome</h1>
+                    <img class="cat-picture" src="./img/sleepingcat.png">
                     <p>Hello and welcome to your friendly neighborhood cat index! The goal of this 
                         website is to help connect cat lovers to friendly cats near them, 
                         creating a new community of feline-caretakers. Right now, our map is limited 
@@ -56,9 +57,11 @@
             <div id="column1-2">
                 <div class="minor-section2">
                     <h1>Navigation and How To</h1>
-                    <p>To input a cat into our system, scroll to the bottom of this page and answer
-                        the questions below. Enter honestly and make sure to input the last 
-                        coordinates you saw your feline-friend! If you would like, please upload a photo of the cat as well but please make sure to respect your neighbors privacy. Thanks!
+                    <img class="cat-picture" src="./img/sittingcat.png">
+                    <p>To input a cat into our system, please enter characteristics about your furry friend
+                       and if you're an owner whether or not you would like your neighbors to feed them. Make 
+                       sure to add the coordinates of where your pets hang out! Enter honestly and please make 
+                       sure to respect your neighbors privacy. Thanks!
                     </p>
                  </div>
              </div>
@@ -66,25 +69,8 @@
 
     <section> <div id="map"></div> </section>
      <div id="wrapper2">
-            <div id="output"></div>
-			<div id="cat-details">
-                <div id="column2-1">
-             <div class="minor-section3">
-                <h2>Upload a Photo of Your Cat!<h2>
-                    <form id="uploadForm">
-                        <label for="imageUpload">Choose and image!</label>
-                        <input type="file" id="imageUpload" accept="image/*">
-                    </form>
-                <h3>Preview:</h3>
-                <div id="imagePreview">
-                    <img id="previewIMG" src="" alt="Image preview will appear here" style="display: none; max-width: 100%;"/>
-                </div>
-                <button id="uploadBtn" style="margin-top: 20px;">Upload to Firebase</button>
-                
-                 </div>
-                </div>
-            </div>
             <div id="column2-2">
+            <!-- Fields for cat details to be inputted -->
             <div class="minor-section4">
                 <p>Name</p>
                 <input type="text" id="catName" placeholder="Cat's Name">
@@ -143,100 +129,7 @@
 
                 <button id="submit">Submit</button>
             </div>
-             <!--<head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Map with Droppable Pins</title>
-                <style>
-                    #map-container {
-                        position: relative;
-                        width: 800px;  /* Set to map's width */
-                        height: 600px; /* Set to map's height */
-                        background-image: url('your-map-image.jpg');  /* Ensure this is the correct path */
-                        background-size: cover;
-                        border: 2px solid #000;
-                    }
-                    .pin {
-                        position: absolute;
-                        width: 30px;
-                        height: 30px;
-                        background-image: url('pin-icon.png');  /* Ensure this is the correct path */
-                        background-size: cover;
-                        cursor: pointer;
-                    }
-                </style>
-             </head>
-             <body>
-            
-             <div id="map-container"></div>
-             -->
-             <!-- Embedded JavaScript at the end of the body -->
-             <!--
-             <script>
-                const mapContainer = document.getElementById("map-container");
-                
-                // Fetch existing pins from the backend when the page loads
-                window.onload = () => {
-                    fetchPins();
-                };
-            
-                // Handle mouse clicks to place pins
-                mapContainer.addEventListener('click', (event) => {
-                    const mapRect = mapContainer.getBoundingClientRect();
-                    const x = event.clientX - mapRect.left;
-                    const y = event.clientY - mapRect.top;
-                    
-                    // Create a new pin element
-                    const pin = document.createElement('div');
-                    pin.classList.add('pin');
-                    pin.style.left = `${x - 15}px`;  // Offset to center pin
-                    pin.style.top = `${y - 15}px`;   // Offset to center pin
-            
-                    // Append the pin to the map container
-                    mapContainer.appendChild(pin);
-            
-                    // Save pin data to the backend
-                    savePin(x, y);
-                });
-            
-                // Fetch and render all existing pins
-                function fetchPins() {
-                    fetch('/api/getPins')  // Example API endpoint
-                        .then(response => response.json())
-                        .then(pins => {
-                            pins.forEach(pin => {
-                                const pinElement = document.createElement('div');
-                                pinElement.classList.add('pin');
-                                pinElement.style.left = `${pin.x - 15}px`;
-                                pinElement.style.top = `${pin.y - 15}px`;
-                                mapContainer.appendChild(pinElement);
-                            });
-                        });
-                }
-            
-                // Save a new pin to the backend
-                function savePin(x, y) {
-                    fetch('/api/savePin', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ x, y })
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        console.log('Pin saved successfully:', data);
-                    })
-                    .catch(error => {
-                        console.error('Error saving pin:', error);
-                    });
-                }
-             </script>
-            
-             </body>
-             </html> -->
             </div>
-        </div>
     </div>
         
     <nav id="links">

@@ -18,9 +18,13 @@
     
 }
 
-body{
-  background-image: linear-gradient(to bottom right,#FFBD6F, #FD8451);
+.cat-picture{
+  margin: 10px;
+  max-width: 200px;
+}
 
+body{
+    background-image: linear-gradient(to right, #a24608a4, #e4a94baa);
     color: #442B00;
   }
 

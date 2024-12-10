@@ -12,7 +12,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    // Firebase Configuration (Replace with your Firebase project details)
+    // Firebase Configuration
     const firebaseConfig = {
         apiKey: "AIzaSyAveQFhXsL7T6-K-nSXsUI2Bw48glo3zL4",
         authDomain: "santa-cruz-cat-index.firebaseapp.com",
@@ -43,7 +43,7 @@ $(document).ready(function() {
         // Add marker to map
         const marker = L.marker([catData.location[0], catData.location[1]]).addTo(map);
         marker.bindPopup(`
-            <p>${catData.catName}</p>
+            <h1>${catData.catName}</h1>
             <p>${catData.selectedBreed}</p>
             <p>${catData.otherBreed}</p>
             <p>${catData.catColor}</p>
@@ -98,7 +98,7 @@ $(document).ready(function() {
         console.log("Longitude:", longitude);
 
         // When all necessary fields input, code adapted from Wes Modes
-        if (catName && selectedBreed && catColor && selectedTags && selectedFriendly && !isNaN(latitude) && !isNaN(longitude)) {
+        if (catName && selectedBreed && catColor && selectedTags && lastFed && selectedFriendly && !isNaN(latitude) && !isNaN(longitude)) {
             // Push to firebase
             catsRef.push({
                 catName,
@@ -124,105 +124,6 @@ $(document).ready(function() {
         } else {
             alert('Please fill out all fields.');
         };
-    
-        /*$("#output").append('<div>' + "Name: " + catName + '<br>' + 
-            "Breed: " + selectedBreed + otherBreed + '<br>' + "Color: " + catColor + 
-            '<br>' + "Do they have tags? " + selectedTags + '<br>' + "When were they last fed? " + 
-            lastFed + '<br>' + "Are they friendly? " + selectedFriendly);*/
     });
 });
 
-
-/*
-// DOM Elements
-const imageUploadInput = document.getElementById('imageUpload');
-const previewImg = document.getElementById('previewIMG');
-const uploadBtn = document.getElementById('uploadBtn');
-
-// Preview the image after selection
-imageUploadInput.addEventListener('change', function(event) {
-    const file = event.target.files[0]; // Get the first file selected
-
-    if (file) {
-        const reader = new FileReader(); // FileReader is used to read the image file
-        reader.onload = function(e) {
-            previewImg.src = e.target.result; // Set the image source to the file's data URL
-            previewImg.style.display = 'block'; // Display the image preview
-        };
-        reader.readAsDataURL(file); // Read the file as a data URL (Base64 encoded string)
-    }
-});
-
-// Handle Upload Button click
-uploadBtn.addEventListener('click', function() {
-    const file = imageUploadInput.files[0]; // Get the selected file
-
-    if (!file) {
-        alert("Please select an image first!");
-        return;
-    }
-
-    // Create a reference to Firebase Storage
-    const databaseRef = database.ref();
-    const fileRef = storageRef.child('cats/' + file.name); // The path inside Firebase Storage
-
-    // Upload file to Firebase Storage
-    const uploadTask = fileRef.put(file);
-
-    // Monitor upload progress
-    uploadTask.on('state_changed', function(snapshot) {
-        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        console.log('Upload is ' + progress + '% done');
-    }, function(error) {
-        // Handle error
-        console.error("Error uploading image:", error);
-        alert("Error uploading image!");
-    }, function() {
-        // Upload completed successfully
-        console.log("Upload successful!");
-        alert("Image uploaded successfully!");
-
-        // Get the download URL and log it (You can save it to your database or display it)
-        uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
-            console.log('File available at', downloadURL);
-            // You can display the download URL or save it to a database
-        });
-    });
-});
-const express = require('express');
-const app2 = express();
-const cors = require('cors');
-const bodyParser = require('body-parser');
-
-// Dummy in-memory storage for pins
-let pins = [];
-
-// Middleware to parse JSON bodies
-app2.use(bodyParser.json());
-app2.use(cors());
-
-// Serve the static files (HTML, CSS, JS)
-app2.use(express.static('public'));
-
-// API to get all saved pins
-app2.get('/api/getPins', (req, res) => {
-    res.json(pins);
-});
-
-// API to save a new pin
-app2.post('/api/savePin', (req, res) => {
-    const { x, y } = req.body;
-    if (x !== undefined && y !== undefined) {
-        pins.push({ x, y });
-        res.status(200).json({ message: 'Pin saved successfully' });
-    } else {
-        res.status(400).json({ message: 'Invalid pin data' });
-    }
-});
-
-// Start the server
-const port = 3000;
-app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
-});
-*/
