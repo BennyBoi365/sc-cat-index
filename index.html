@@ -21,6 +21,10 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
 	
 	<!-- load jQuery library to make javascript easier (must be above our lab js)-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -68,7 +72,7 @@
              <div class="minor-section3">
                 <h2>Upload a Photo of Your Cat!<h2>
                     <form id="uploadForm">
-                        <label for="imageUpload">Choose and image!</label>
+                        <label for="imageUpload">Choose an image!</label>
                         <input type="file" id="imageUpload" accept="image/*">
                     </form>
                 <h3>Preview:</h3>
@@ -76,7 +80,7 @@
                     <img id="previewIMG" src="" alt="Image preview will appear here" style="display: none; max-width: 100%;"/>
                 </div>
                 <button id="uploadBtn" style="margin-top: 20px;">Upload to Firebase</button>
-                <script src="upload.js"> </script>
+                
                  </div>
                 </div>
             </div>
@@ -86,6 +90,7 @@
                 <input type="text" id="catName" placeholder="Cat's Name">
                 <p>Breed</p>
                 <select id="breedOptions">
+                    <option value=""></option>
                     <option value="Calico">Calico</option>
                     <option value="Shorthair">Shorthair</option>
                     <option value="Persian">Persian</option>
@@ -101,6 +106,7 @@
 
                 <p>Color/Pattern</p>
                 <select id="catColor" placeholder="Cat's Color">
+                    <option value=""></option>
                     <option value="Black">Black</option>
                     <option value="White">White</option>
                     <option value="Grey">Grey</option>
@@ -111,12 +117,14 @@
 
                 <p>Tags?</p>
                 <select id="tagsYesOrNo">
+                    <option value=""></option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                 </select>
 
                 <p>Fed?</p>
                 <select id="lastFed">
+                    <option value=""></option>
                     <option value="Just fed">Just Fed</option>
                     <option value="Fed recently">Fed Recently</option>
                     <option value="Not recently">Hungry</option>
@@ -124,12 +132,18 @@
 
                 <p>Friendly?</p>
                 <select id="friendlyYesOrNo">
+                    <option value=""></option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                 </select>
+
+                <p>Location</p>
+                <input id="latitude" type="number" placeholder="Latitude">
+                <input id="longitude" type="number" placeholder="Longitude">
+
                 <button id="submit">Submit</button>
             </div>
-             <head>
+             <!--<head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>Map with Droppable Pins</title>
@@ -155,8 +169,9 @@
              <body>
             
              <div id="map-container"></div>
-            
+             -->
              <!-- Embedded JavaScript at the end of the body -->
+             <!--
              <script>
                 const mapContainer = document.getElementById("map-container");
                 
@@ -219,7 +234,7 @@
              </script>
             
              </body>
-             </html>
+             </html> -->
             </div>
         </div>
     </div>
