@@ -24,7 +24,7 @@
 }
 
 body{
-    background-image: linear-gradient(to right, #a24608a4, #e4a94baa);
+    background-image: linear-gradient(to right, #f1c26a88, #e4be76);
     color: #442B00;
   }
 
@@ -79,8 +79,8 @@ body{
   .minor-section1,.minor-section2,.minor-section3,.minor-section4{
     padding: 30px;
     margin-bottom: 10px;
-    border: solid 1px #DDC3D0;
-    background-color:#DDC3D0;
+    border: solid 1px #A88A64;
+    background-color:#bb9f7a;
     margin-right: 200px;
     border-radius: 25px;
     margin-left: 200px;
@@ -97,7 +97,6 @@ body{
 box-shadow: 10px 10px 13px 3px rgba(0,0,0,0.41);
   }
   
-
 #map { 
     height: 500px;
     width: 1000px;
