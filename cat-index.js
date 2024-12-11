@@ -47,9 +47,9 @@ $(document).ready(function() {
             <p>${catData.selectedBreed}</p>
             <p>${catData.otherBreed}</p>
             <p>${catData.catColor}</p>
-            <p>${catData.selectedTags}</p>
+            <p>Tags?: ${catData.selectedTags}</p>
             <p>${catData.lastFed}</p>
-            <p>${catData.selectedFriendly}</p>
+            <p>Friendly?: ${catData.selectedFriendly}</p>
         `);
     });
 
